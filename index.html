@@ -3,18 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Happy Birthday</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Angry Cat</title>
+    <style>
+        body {
+            background-color: black;
+            text-align: center;
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+        .cat-gif {
+            width: 200px;
+            height: auto;
+        }
+        .options {
+            margin-top: 20px;
+        }
+        button {
+            font-size: 20px;
+            padding: 10px;
+            margin: 10px;
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body>
-    <div class="container">
-        <h1>🎉 Happy Birthday! 🎂</h1>
-        <p>Wishing you a fantastic day filled with love, laughter, and joy!</p>
-        <button onclick="showSurprise()">Click for a Surprise!</button>
-        <div id="surprise" class="hidden">
-            <p>Make a wish and enjoy your special day! 🎈</p>
-        </div>
+    <h1>You dummy! Don't you want to know what I have to say? Choose the big option!</h1>
+    <img src="cat_angry.gif" alt="Angry Cat" class="cat-gif">
+    
+    <div class="options">
+        <button id="no">No</button>
+        <button id="tellMe">Tell Me</button>
     </div>
-    <script src="script.js"></script>
+
+    <script>
+        document.getElementById("tellMe").addEventListener("click", function() {
+            window.location.href = "birthday.html";
+        });
+
+        document.getElementById("no").addEventListener("click", function() {
+            alert("Choose 'Tell Me' instead!");
+        });
+    </script>
 </body>
 </html>
